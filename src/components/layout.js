@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import LeftNav from './leftnav'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -33,6 +34,7 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
+        <LeftNav></LeftNav>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
