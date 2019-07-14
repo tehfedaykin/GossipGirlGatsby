@@ -1,15 +1,12 @@
 import { Link, useStaticQuery, graphql } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
- import Img from 'gatsby-image'
+import Img from 'gatsby-image'
 
 const Header = () =>  {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          # Specify a fluid image and fragment
-          # The default maxWidth is 800 pixels
           fluid {
             ...GatsbyImageSharpFluid
           }
@@ -36,13 +33,5 @@ const Header = () =>  {
     </div>
   </header>
 )}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
