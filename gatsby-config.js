@@ -33,7 +33,8 @@ module.exports = {
       options: {
         fonts: [`Montserrat\:100,300,400,700`]
       }
-    }
+    },
+    `gatsby-plugin-emotion`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

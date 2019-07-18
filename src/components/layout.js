@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import LeftNav from './leftnav'
+import RightNav from './rightnav'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,8 +35,17 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <LeftNav />
-        <main>{children}</main>
+        <div class="row">
+          <div class="col">
+            <LeftNav />
+          </div>
+          <div class="col-6">
+            <main>{children}</main>
+          </div>
+          <div class="col">
+            <RightNav />
+          </div>
+        </div>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
