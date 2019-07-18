@@ -8,10 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 import Header from "./header"
 import LeftNav from './leftnav'
 import RightNav from './rightnav'
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,11 +23,22 @@ const Layout = ({ children }) => {
           title
         }
       }
+      desktop: file(relativePath: { eq: "background.jpg" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 4160) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
 
   return (
-    <>
+    <BackgroundImage 
+      Tag="section"
+      fluid={data.desktop.childImageSharp.fluid}
+      backgroundColor={`#000000`}
+    >
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -52,7 +65,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </>
+    </BackgroundImage>
   )
 }
 
