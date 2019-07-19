@@ -34,7 +34,15 @@ module.exports = {
         fonts: [`Montserrat\:100,300,400,700`]
       }
     },
-    `gatsby-plugin-emotion`
+    `gatsby-plugin-emotion`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
