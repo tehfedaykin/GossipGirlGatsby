@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../../components/layout'
-import BlastSnippet from '../../components/blastsnippet'
+import Layout from '../components/layout'
+import BlastSnippet from '../components/blastsnippet'
 
 export default({data}) => {
   const blast = data.markdownRemark
-  const image = require('../../images/' + blast.frontmatter.image);
+  const image = require('../images/' + blast.frontmatter.image);
   return(
     <Layout>
        <BlastSnippet key={blast.title}

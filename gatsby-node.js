@@ -3,7 +3,7 @@ const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  const blastTemplate = path.resolve(`src/pages/templates/blast.js`)
+  const blastTemplate = path.resolve(`src/templates/blast.js`)
 
   return graphql(`
     {

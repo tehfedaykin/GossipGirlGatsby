@@ -1,9 +1,9 @@
 ---
-title: 'Lemon caught out on a stroll'
-date: "2019-07-17T23:46:37.121Z"
+title: 'Art doing who knows what'
+date: "2019-07-01T23:46:37.121Z"
 person: 'Art Doler'
 location: 'Omaha'
 image: 'art.jpg'
 ---
 
-He may seem chill, but we spotted Lemon out for a stroll on his way back from Prada. Looks like CSS isn't the only thing he has expensive taste in.
+We've heard of developers needing a wake up beverage in the morning, but Art takes it to a whole new level.
