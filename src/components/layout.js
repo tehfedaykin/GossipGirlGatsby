@@ -38,6 +38,10 @@ const Layout = ({ children }) => {
       Tag="section"
       fluid={data.desktop.childImageSharp.fluid}
       backgroundColor={`#000000`}
+      style={{
+        backgroundSize: '100%',
+        backgroundPosition: 'center top'
+      }}
     >
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
