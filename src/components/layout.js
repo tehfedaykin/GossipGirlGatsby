@@ -48,14 +48,14 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             <LeftNav />
           </div>
-          <div class="col-6">
+          <div className="col-6">
             <main>{children}</main>
           </div>
-          <div class="col">
+          <div className="col">
             <RightNav />
           </div>
         </div>

@@ -27,6 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create blast post pages.
     result.data.allMarkdownRemark.edges.forEach(edge => {
+      console.log('slug', edge.node.fields.slug);
       createPage({
         // Path for this page — required
         path: `${edge.node.fields.slug}`,

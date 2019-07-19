@@ -9,11 +9,11 @@ export default({data}) => {
   const image = require('../../images/' + blast.frontmatter.image);
   return(
     <Layout>
-       <BlastSnippet key={blast.title}
-          image={image}
-          date={blast.frontmatter.date}
-          person={blast.frontmatter.person}
-          text={blast.html}/>
+      <BlastSnippet key={blast.title}
+        image={image}
+        date={blast.frontmatter.date}
+        person={blast.frontmatter.person}
+        text={blast.html}/>
     </Layout>
   )
 }
