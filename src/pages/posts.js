@@ -2,11 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import BlastSnippet from '../components/blastsnippet'
+import SEO from "../components/seo"
 
 export default({data}) => {
   const blasts = data.allMarkdownRemark.edges
   return(
     <Layout>
+      <SEO title="Posts" />
       <h1>The Scandal</h1>
       {blasts.map(({ node }) => {
         const image = require('../images/' + node.frontmatter.image);
