@@ -20,9 +20,11 @@ const BlastStyle = styled('div')`
   }
 `
 
-const BlastSnippet = props => (
+const BlastSnippet = props => {
+  const slug = props.slug ? props.slug : ''
+  return(
   <BlastStyle>
-    <Link style={{ boxShadow: 'none' }} to={props.slug}>
+    <Link style={{ boxShadow: 'none' }} to={slug}>
       <h2>Spotted: {props.person}</h2>
       <img
          title="Header image"
@@ -34,6 +36,6 @@ const BlastSnippet = props => (
     <p dangerouslySetInnerHTML={{ __html: props.text }} />
     <p><small>{props.date}</small></p>
   </BlastStyle>
-);
+)};
 
 export default BlastSnippet
